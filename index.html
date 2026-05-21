@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartCRM</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+  <h1>SmartCRM</h1>
+
+  <ul>
+    <li onclick="showPage('dashboard')">Dashboard</li>
+    <li onclick="showPage('customers')">Customers</li>
+    <li onclick="showPage('campaigns')">Campaigns</li>
+    <li onclick="showPage('analytics')">Analytics</li>
+    <li onclick="showPage('automation')">Automation</li>
+    <li onclick="showPage('settings')">Settings</li>
+  </ul>
+</div>
+
+<div class="main">
+
+  <!-- Dashboard -->
+  <div id="dashboard" class="page">
+
+    <h2>Dashboard Overview</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Total Customers</h3>
+        <p>15,420</p>
+      </div>
+
+      <div class="card">
+        <h3>Campaigns</h3>
+        <p>842</p>
+      </div>
+
+      <div class="card">
+        <h3>Engagement</h3>
+        <p>95%</p>
+      </div>
+
+      <div class="card">
+        <h3>Revenue</h3>
+        <p>72%</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Customers -->
+  <div id="customers" class="page hidden">
+
+    <h2>Customers</h2>
+
+    <input type="text" id="name" placeholder="Customer Name">
+    <input type="email" id="email" placeholder="Email">
+
+    <button onclick="addCustomer()">Add Customer</button>
+
+    <table id="customerTable">
+
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+
+    </table>
+
+  </div>
+
+  <!-- Campaigns -->
+  <div id="campaigns" class="page hidden">
+
+    <h2>Campaigns</h2>
+
+    <div class="card">
+      <h3>Summer Offer</h3>
+      <p>20% Discount Campaign</p>
+    </div>
+
+  </div>
+
+  <!-- Analytics -->
+  <div id="analytics" class="page hidden">
+
+    <h2>Analytics</h2>
+
+    <div class="cards">
+
+      <div class="card">
+        <h3>Engagement</h3>
+        <p>95%</p>
+      </div>
+
+      <div class="card">
+        <h3>Growth</h3>
+        <p>72%</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Automation -->
+  <div id="automation" class="page hidden">
+
+    <h2>Automation</h2>
+
+    <div class="card">
+      <h3>Email Automation</h3>
+      <p>Automation Enabled</p>
+    </div>
+
+  </div>
+
+  <!-- Settings -->
+  <div id="settings" class="page hidden">
+
+    <h2>Settings</h2>
+
+    <input type="text" placeholder="Company Name">
+
+    <button onclick="saveSettings()">
+      Save Settings
+    </button>
+
+    <p id="saveMsg"></p>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
